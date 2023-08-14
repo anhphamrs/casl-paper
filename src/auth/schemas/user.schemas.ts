@@ -14,6 +14,30 @@ export class User extends Document {
 
   @Prop()
   picture: string;
+
+  @Prop()
+  isAdmin: boolean;
+
+  @Prop()
+  isPublished: boolean;
+
+  @Prop()
+  password: string;
+
+  @Prop()
+  keySecret: string;
+
+  @Prop()
+  dateOfBirth: string;
+
+  @Prop()
+  phoneNumber: string;
+
+  @Prop({ type: Object })
+  files: string;
+
+  @Prop()
+  gender: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
