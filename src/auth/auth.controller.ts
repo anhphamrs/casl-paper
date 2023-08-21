@@ -10,7 +10,9 @@ export class AuthController {
 
   @Get('google')
   @UseGuards(AuthGuard('google'))
-  async googleAuth(@Req() req) {}
+  async googleAuth(@Req() req) {
+    //todo
+  }
 
   @Get('google/redirect')
   @UseGuards(AuthGuard('google'))
@@ -25,7 +27,7 @@ export class AuthController {
     return this.authService.signUp(signUpDto);
   }
 
-  @Post('/login')
+  @Post('login')
   LogIn(@Body() LogInDto: LogInDto): Promise<{ token: string }> {
     return this.authService.LogIn(LogInDto);
   }
